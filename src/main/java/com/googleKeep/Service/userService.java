@@ -27,9 +27,12 @@ public class userService {
     }
 
     public NotesModel updatebyId(String Id,String Content){
-          Optional<NotesModel> saved=db.findById(Id);
-          saved.get().setContent(Content);
-          return db.save(saved.get());
+
+            Optional<NotesModel> saved=db.findById(Id);
+            saved.get().setContent(Content);
+            return db.save(saved.get());
+
+
     }
 
 }
